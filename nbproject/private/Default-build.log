@@ -1,0 +1,17 @@
+rm -rf _build
+echo  Makefile
+Makefile
+mkdir _build
+Compiling file: system_nrf51.c
+Compiling file: main.c
+Compiling file: unity.c
+Compiling file: tests.c
+Compiling file: nrf_delay.c
+Compiling file: gcc_startup_nrf51.s
+Linking target: nrf51822_xxac.out
+Preparing: nrf51822_xxac.bin
+Preparing: nrf51822_xxac.hex
+
+   text	   data	    bss	    dec	    hex	filename
+   8448	    100	    140	   8688	   21f0	_build/nrf51822_xxac.out
+
