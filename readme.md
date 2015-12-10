@@ -7,8 +7,8 @@ The example runs a simple unit test and will light up green if passed, or red if
 # Build
 
 ```
-git clone git@github.com:ihassin/nrf51-blinky-unit.git
-cd nrf51-blinky-unity
+git clone git@github.com:ihassin/nrf51-unity.git
+cd nrf51-unity
 mkdir build
 cd build
 cmake ..
