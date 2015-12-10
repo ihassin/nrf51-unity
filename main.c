@@ -40,7 +40,6 @@ int main(void)
     UnityBegin("main.c");
 
     LEDS_CONFIGURE(LEDS_MASK);
-//    LEDS_INVERT(1 << leds_list[0]);     // Blue
 
     RUN_TEST(test_1);
 
@@ -50,22 +49,6 @@ int main(void)
     } else {
         LEDS_INVERT(1 << leds_list[1]);     // Red
     }
-
-#if 0
-    // Configure LED-pins as outputs.
-    LEDS_CONFIGURE(LEDS_MASK);
-
-    // Toggle LEDs.
-    while (true)
-    {
-        for (int i = 0; i < LEDS_NUMBER; i++)
-        {
-            LEDS_INVERT(1 << leds_list[i]);
-            nrf_delay_ms(140);
-        }
-    }
-#endif
-
 }
 
 
