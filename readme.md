@@ -9,9 +9,6 @@ The example runs a simple unit test and will light up green if passed, or red if
 ```
 git clone git@github.com:ihassin/nrf51-unity.git
 cd nrf51-unity
-mkdir build
-cd build
-cmake ..
 make
 ```
 
