@@ -26,12 +26,6 @@ cd .. # Going back to the root of the project
 
 You should see blinky work immediately on the device.
 
-# Open questions
-
-The resulting HEX file loads and runs, yet is different from the one created by ```make``` at the root, even though both use the same compiler flags.
-
-Please comment and improve so that both binaries are identical!
-
 # License
 
 MIT, apart from anything belonging to Nordic.
