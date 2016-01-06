@@ -4,5 +4,6 @@
 #include "unity.h"
 
 void test_1();
+void test_2();
 
 #endif

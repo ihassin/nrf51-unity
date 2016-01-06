@@ -9,8 +9,9 @@ MAKEFILE_NAME := $(MAKEFILE_LIST)
 MAKEFILE_DIR := $(dir $(MAKEFILE_NAME) ) 
 
 SDK_ROOT :=  $(HOME)/nrf/sdk/nrf51_sdk_latest
+COMPONENTS := $(SDK_ROOT)/components
 
-TEMPLATE_PATH = $(SDK_ROOT)/components/toolchain/gcc
+TEMPLATE_PATH = $(COMPONENTS)/toolchain/gcc
 UNITY := $(HOME)/Documents/projects/unity/src
 
 include $(TEMPLATE_PATH)/Makefile.posix
@@ -40,11 +41,11 @@ remduplicates = $(strip $(if $1,$(firstword $1) $(call remduplicates,$(filter-ou
 
 #source common to all targets
 C_SOURCE_FILES += \
-$(abspath $(SDK_ROOT)/components/toolchain/system_nrf51.c) \
 $(abspath main.c) \
+$(abspath util.c) \
 $(abspath $(UNITY)/unity.c) \
 $(abspath $(UNITY)/tests.c) \
-$(abspath $(SDK_ROOT)/components/drivers_nrf/hal/nrf_delay.c)
+$(abspath $(COMPONENTS)/toolchain/system_nrf51.c)
 
 #assembly files common to all targets
 ASM_SOURCE_FILES  = $(abspath $(SDK_ROOT)/components/toolchain/gcc/gcc_startup_nrf51.s)
@@ -52,7 +53,6 @@ ASM_SOURCE_FILES  = $(abspath $(SDK_ROOT)/components/toolchain/gcc/gcc_startup_n
 #includes common to all targets
 INC_PATHS  = -I$(abspath $(SDK_ROOT)/components/toolchain/gcc)
 INC_PATHS += -I$(abspath $(SDK_ROOT)/components/toolchain)
-INC_PATHS += -I$(abspath $(SDK_ROOT)/components/softdevice/$(SOFTDEVICE)/headers)
 INC_PATHS += -I$(abspath $(SDK_ROOT)/examples/bsp)
 INC_PATHS += -I$(abspath $(SDK_ROOT)/components/device)
 INC_PATHS += -I$(abspath $(SDK_ROOT)/components/drivers_nrf/hal)
