@@ -4,6 +4,7 @@
     <df root="." name="0">
       <in>main.c</in>
       <in>tests.c</in>
+      <in>util.c</in>
     </df>
     <logicalFolder name="ThoughtWorks"
                    displayName="ThoughtWorks"
@@ -14,8 +15,11 @@
           <logicalFolder name="Unity" displayName="Unity" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
               <itemPath>../../../Documents/projects/Unity/src/unity.c</itemPath>
+              <itemPath>../../../Unity/src/unity.c</itemPath>
               <itemPath>../../../Documents/projects/Unity/src/unity.h</itemPath>
+              <itemPath>../../../Unity/src/unity.h</itemPath>
               <itemPath>../../../Documents/projects/Unity/src/unity_internals.h</itemPath>
+              <itemPath>../../../Unity/src/unity_internals.h</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -28,17 +32,21 @@
             <logicalFolder name="components" displayName="components" projectFiles="true">
               <logicalFolder name="device" displayName="device" projectFiles="true">
                 <itemPath>../../sdk/nrf51_sdk_latest/components/device/nrf51.h</itemPath>
+                <itemPath>../../../../../nrf/sdk/nrf51_sdk_latest/components/device/nrf51.h</itemPath>
               </logicalFolder>
               <logicalFolder name="drivers_nrf" displayName="drivers_nrf" projectFiles="true">
                 <logicalFolder name="hal" displayName="hal" projectFiles="true">
                   <itemPath>../../sdk/nrf51_sdk_latest/components/drivers_nrf/hal/nrf_delay.c</itemPath>
                   <itemPath>../../sdk/nrf51_sdk_latest/components/drivers_nrf/hal/nrf_delay.h</itemPath>
                   <itemPath>../../sdk/nrf51_sdk_latest/components/drivers_nrf/hal/nrf_gpio.h</itemPath>
+                  <itemPath>../../../../../nrf/sdk/nrf51_sdk_latest/components/drivers_nrf/hal/nrf_gpio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="toolchain" displayName="toolchain" projectFiles="true">
                 <itemPath>../../sdk/nrf51_sdk_latest/components/toolchain/system_nrf51.c</itemPath>
+                <itemPath>../../../../../nrf/sdk/nrf51_sdk_latest/components/toolchain/system_nrf51.c</itemPath>
                 <itemPath>../../sdk/nrf51_sdk_latest/components/toolchain/system_nrf51.h</itemPath>
+                <itemPath>../../../../../nrf/sdk/nrf51_sdk_latest/components/toolchain/system_nrf51.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -82,11 +90,34 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
+      <item path="../../../../../nrf/sdk/nrf51_sdk_latest/components/toolchain/system_nrf51.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../../../nrf/sdk/nrf51_sdk_latest/components/toolchain</pElem>
+            <pElem>../../../../../nrf/sdk/nrf51_sdk_latest/components/device</pElem>
+          </incDir>
+        </cTool>
+      </item>
       <item path="../../../Documents/projects/Unity/src/unity.c"
             ex="false"
             tool="0"
             flavor2="2">
         <cTool flags="0">
+          <incDir>
+            <pElem>../../../Documents/projects/Unity/src</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../../Unity/src/unity.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../Unity/src</pElem>
+            <pElem>.</pElem>
+          </incDir>
         </cTool>
       </item>
       <item path="../../sdk/nrf51_sdk_latest/components/drivers_nrf/hal/nrf_delay.c"
@@ -101,6 +132,10 @@
             tool="0"
             flavor2="2">
         <cTool flags="0">
+          <incDir>
+            <pElem>../../sdk/nrf51_sdk_latest/components/toolchain</pElem>
+            <pElem>../../sdk/nrf51_sdk_latest/components/device</pElem>
+          </incDir>
         </cTool>
       </item>
       <folder path="ThoughtWorks/Documents">
@@ -119,20 +154,9 @@
           </incDir>
         </cTool>
       </folder>
-      <folder path="ThoughtWorks/nrf/sdk/nrf51_sdk_latest/components/toolchain">
-        <cTool>
-          <incDir>
-            <pElem>../../sdk/nrf51_sdk_latest/components/toolchain</pElem>
-            <pElem>../../sdk/nrf51_sdk_latest/components/device</pElem>
-          </incDir>
-        </cTool>
-      </folder>
       <item path="main.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
           <incDir>
-            <pElem>../../sdk/nrf51_sdk_latest/components/drivers_nrf/hal</pElem>
-            <pElem>../../sdk/nrf51_sdk_latest/components/device</pElem>
-            <pElem>../../../Documents/projects/Unity/src</pElem>
             <pElem>.</pElem>
           </incDir>
         </cTool>
@@ -140,7 +164,17 @@
       <item path="tests.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
           <incDir>
-            <pElem>../../../Documents/projects/Unity/src</pElem>
+            <pElem>../../../Unity/src</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="util.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../../../../nrf/sdk/nrf51_sdk_latest/components/drivers_nrf/hal</pElem>
+            <pElem>../../../Unity/src</pElem>
+            <pElem>../../../../../nrf/sdk/nrf51_sdk_latest/components/device</pElem>
             <pElem>.</pElem>
           </incDir>
         </cTool>

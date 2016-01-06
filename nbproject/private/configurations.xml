@@ -11,6 +11,8 @@
       <in>main.c</in>
       <in>tests.c</in>
       <in>tests.h</in>
+      <in>util.c</in>
+      <in>util.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -38,11 +40,13 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
             <option name="gdb_source_dirs" value="."/>
             <option name="debug_dir"
-                    value="/Users/ThoughtWorks/nrf/projects/nrf51-blinky-unity/_build"/>
+                    value="/Users/ThoughtWorks/Documents/projects/embedded/nrf51/nrf51-unity/_build"/>
           </DebugOptions>
         </gdb_options>
         <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
