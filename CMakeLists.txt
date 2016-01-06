@@ -53,6 +53,7 @@ set(SOURCE_FILES
     ${NRF_TOOLCHAIN}/system_nrf51.c
     ${SDK_COMPONENTS}/drivers_nrf/hal/nrf_delay.c
     ${UNITY}/unity.c
+    util.c
     main.c)
 
 # Unit test files
